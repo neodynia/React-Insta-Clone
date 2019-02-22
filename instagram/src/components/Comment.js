@@ -11,6 +11,7 @@ export default function Comment(props) {
           </>
         )
       })}
+      <input type="text" placeholder="comment..." />
     </>
   )
 }
