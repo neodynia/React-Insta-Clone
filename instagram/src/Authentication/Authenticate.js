@@ -1,32 +1,5 @@
-import React from 'react';
-import Login from '../components/Login/Login';
+import React from 'react'
 
-const Authenticate = App =>
-    class extends React.Component {
-        constructor(props) {
-            super(props);
-            this.state ={
-                isLoggedIn: false
-            }
-        }
-
-        componentDidMount = () => {
-            if (window.localStorage.getItem('username')) {
-                this.setState({
-                    isLoggedIn: !this.state.isLoggedIn
-                })
-            }
-        }
-
-        render() {
-            
-           return (
-                this.state.isLoggedIn ? <App /> : <Login />
-           )
-        }
-
-           
-        
-    }
-
-export default Authenticate;
+export default function Authenticate() {
+  return <div />
+}

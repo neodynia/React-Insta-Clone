@@ -1,38 +1,17 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from 'react'
 
-const InputBox = styled.div`
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 10px 0;
-`;
+const Input = props => {
+  return (
+    <form onSubmit={props.add}>
+      <input
+        type="text"
+        placeholder="Add a comment ..."
+        name="user"
+        onChange={props.change}
+        value={props.value}
+      />
+    </form>
+  )
+}
 
-const Inputs = styled.div`
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
-`;
-
-const Input = (props) => {
-    return (
-        <form onSubmit={props.add}>
-            <InputBox>
-                <Inputs>
-                    <input
-                        type="text"
-                        placeholder="Add a comment ..."
-                        name="user"
-                        onChange={props.change}
-                        value={props.value}
-                    />
-                    <i className="fas fa-ellipsis-h" />
-                </Inputs>
-            </InputBox>
-        </form>
-    );
-};
-
-export default Input;
+export default Input
