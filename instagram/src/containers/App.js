@@ -4,7 +4,7 @@ import PostContainer from './PostContainer'
 import dataStore from '../dummy-data'
 import PostReducer from '../reducers/PostReducer'
 
-export const PostContainerContext = React.createContext({ dataStore })
+export const PostContainerContext = React.createContext({ dataStore, isEditing: false })
 
 export default function App() {
   const initialState = useContext(PostContainerContext)
